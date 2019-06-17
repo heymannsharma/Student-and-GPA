@@ -1,0 +1,19 @@
+boolean checkID = true;
+                    if (employeeList.isEmpty() != true) {
+                        while (checkID == true) {
+                            for (int j = 0; j < employeeList.size(); j++) {
+                                if ((employeeList.get(j)).getId() == eId) {
+                                    System.out.println("ID already assigned to another employee.");
+                                    System.out.println("Please enter an new ID");
+                                    while (!scan.hasNextInt()) {
+                                        scan.nextLine();
+                                        System.out.println("Invalid Input!");
+                                        System.out.print("Please enter an new ID ");
+                                    }
+                                    eId = scan.nextInt();
+                                } else {
+                                    checkID = false;
+                                }
+                            }
+                        }
+                    }
